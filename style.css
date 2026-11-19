@@ -1,0 +1,775 @@
+/* ==========================================================
+   Universal Typing Master - style.css  (used by index.php)
+   Note: modal, user dropdown and animations are already
+   defined inside index.php <style>. This file has the rest.
+   ========================================================== */
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    background:#eef3f8;
+    color:#172033;
+    font-family:Arial,"Noto Sans Devanagari","Mangal",sans-serif;
+    line-height:1.5;
+}
+a{color:#0369a1}
+button{font-family:inherit}
+
+/* ---------- Top institute bar ---------- */
+.top-institute-bar{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;
+    padding:6px 2%;
+    background:#082f49;color:#fff;
+    font-size:13px;font-weight:700;letter-spacing:.2px;
+}
+.inst-cert{color:#bae6fd}
+
+/* ---------- Menu bar ---------- */
+.top-menu-bar{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+    padding:8px 4%;
+    background:#e0f2fe;
+    border-bottom:2px solid #bae6fd;
+    position:relative;z-index:10000;
+}
+.menu-items{display:flex;flex-wrap:wrap;gap:6px}
+.menu-items a{
+    padding:9px 16px;border-radius:7px;
+    color:#075985;text-decoration:none;font-weight:700;font-size:14px;
+    transition:background .2s,color .2s;
+}
+.menu-items a:hover{background:#bae6fd}
+.menu-items a.active{background:#0369a1;color:#fff}
+.menu-auth{display:flex;align-items:center}
+
+/* ---------- Main area ---------- */
+.main-screen-container{flex:1;width:100%;padding:0}
+.error-strip{
+    margin:14px auto 0;width:min(1100px,94%);
+    padding:12px 16px;border-radius:8px;
+    background:#fee2e2;color:#b91c1c;border:1px solid #fecaca;font-weight:700;
+}
+
+/* ---------- Landing page ---------- */
+.desktop-landing-bg{
+    padding:34px 20px 40px;
+    min-height:calc(100vh - 170px);
+    background:linear-gradient(135deg,#e0f2fe 0%,#f0f9ff 45%,#ecfdf5 100%);
+}
+.landing-twin-card{
+    width:min(1250px,100%);
+    margin:0 auto;
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 18px 50px rgba(15,23,42,.12);
+    overflow:hidden;
+}
+.landing-split-card{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 400px;
+}
+.landing-left-panel{padding:30px;min-width:0}
+.landing-header-title{
+    text-align:center;margin-bottom:26px;
+    font-size:21px;font-weight:800;color:#075985;line-height:1.4;
+}
+.landing-header-title span{display:block;margin-top:5px;font-size:16px;font-weight:700;color:#0f766e}
+
+.mode-cards-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:18px;
+}
+.mode-box{
+    position:relative;
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    padding:26px 16px 20px;
+    background:#fff;
+    border:1px solid #dbe5ef;border-radius:16px;
+    cursor:pointer;
+}
+.mode-box h3{margin:12px 0 8px;font-size:16px;color:#1e3a5f;letter-spacing:.3px}
+.mode-box p{margin:0 0 16px;font-size:13px;color:#64748b;flex:1}
+.mode-badge{
+    position:absolute;top:10px;left:10px;
+    padding:3px 10px;border-radius:12px;
+    background:#e0f2fe;color:#075985;font-size:11px;font-weight:800;
+}
+.mode-icon-circle{
+    width:68px;height:68px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:32px;
+}
+.blue-icon{background:#dbeafe}
+.green-icon{background:#dcfce7}
+.orange-icon{background:#ffedd5}
+
+.btn-portal{
+    width:100%;padding:11px 14px;
+    border:0;border-radius:8px;
+    background:#0369a1;color:#fff;
+    font-size:14px;font-weight:700;cursor:pointer;
+    transition:filter .2s,transform .2s;
+}
+.btn-portal:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.green-btn{background:#15803d}
+.orange-btn{background:#ea580c}
+.landing-help-text{
+    margin:24px 0 0;text-align:center;
+    font-size:13px;color:#64748b;
+}
+
+/* ---------- Login / Register panel ---------- */
+.landing-auth-panel{
+    padding:28px 26px;
+    background:#f8fafc;
+    border-left:1px solid #e2e8f0;
+    min-width:0;
+}
+.landing-auth-heading{text-align:center;margin-bottom:18px}
+.landing-auth-heading h2{margin:0 0 5px;font-size:20px;color:#075985}
+.landing-auth-heading p{margin:0;font-size:13px;color:#64748b}
+
+.auth-tabs{display:flex;gap:0;margin-bottom:18px;border:1px solid #cbd5e1;border-radius:9px;overflow:hidden}
+.auth-tab{
+    flex:1;padding:11px;border:0;
+    background:#fff;color:#475569;font-weight:700;font-size:14px;cursor:pointer;
+    transition:background .2s,color .2s;
+}
+.auth-tab.active{background:#0369a1;color:#fff}
+
+.utm-window-form{margin:0}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;margin-bottom:6px;font-size:13px;font-weight:700;color:#334155}
+.req{color:#dc2626}
+.win-input{
+    width:100%;padding:11px 12px;
+    border:1px solid #cbd5e1;border-radius:8px;
+    background:#fff;font-size:14px;font-family:inherit;color:#0f172a;
+}
+.win-input:focus{outline:none;border-color:#0369a1;box-shadow:0 0 0 3px rgba(3,105,161,.15)}
+.win-btn-row{margin-top:18px}
+.win-btn-start{
+    width:100%;padding:12px;border:0;border-radius:8px;
+    background:#086087;color:#fff;font-size:15px;font-weight:700;cursor:pointer;
+    transition:background .2s;
+}
+.win-btn-start:hover{background:#0a7aa8}
+.win-version{margin-top:18px;text-align:center;font-size:12px;color:#94a3b8}
+.logged-in-panel{min-height:10px}
+
+/* ---------- Instruction / selection windows ---------- */
+.utm-instructions-window{
+    width:min(1100px,94%);
+    margin:30px auto;
+    background:#fff;
+    border:1px solid #cbd5e1;border-radius:14px;
+    box-shadow:0 12px 36px rgba(15,23,42,.12);
+    overflow:hidden;
+}
+.inst-win-header{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:13px 20px;
+    background:linear-gradient(90deg,#075985,#0e7490);
+    color:#fff;font-weight:700;font-size:16px;
+}
+.close-lnk{
+    color:#fff;text-decoration:none;font-size:18px;font-weight:700;
+    width:30px;height:30px;line-height:30px;text-align:center;border-radius:50%;
+    transition:background .2s;
+}
+.close-lnk:hover{background:rgba(255,255,255,.25)}
+
+.upload-zone-box{
+    padding:30px;text-align:center;
+    border:2px dashed #7dd3fc;border-radius:14px;background:#f0f9ff;
+}
+.upload-zone-box .win-input{margin:0 auto}
+.key-restrictions-strip{
+    display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;
+    padding:12px 16px;border:1px solid #dbe5ef;border-radius:10px;background:#f8fafc;
+    font-size:13px;
+}
+.key-restrictions-strip label{display:inline-flex;align-items:center;gap:4px;cursor:pointer}
+
+.btn-start-exam-blue{
+    display:inline-block;
+    padding:11px 22px;border:0;border-radius:8px;
+    background:#0369a1;color:#fff;font-size:15px;font-weight:700;cursor:pointer;
+    transition:filter .2s,transform .2s;
+}
+.btn-start-exam-blue:hover{filter:brightness(1.12);transform:translateY(-1px)}
+
+.inst-split-layout{display:grid;grid-template-columns:minmax(280px,380px) minmax(0,1fr);min-height:440px}
+.inst-left-list{padding:20px;border-right:1px solid #e2e8f0;background:#f8fafc}
+.inst-left-list h4{margin:0 0 10px;font-size:15px;color:#075985}
+.difficulty-options label{display:inline-flex;align-items:center;gap:5px;font-weight:600;cursor:pointer}
+.passage-list-scroll{
+    max-height:250px;overflow-y:auto;
+    margin-bottom:12px;padding:6px;
+    border:1px solid #cbd5e1;border-radius:9px;background:#fff;
+}
+.passage-item{
+    display:flex;align-items:center;gap:8px;
+    padding:8px 10px;border-radius:6px;
+    font-size:13px;cursor:pointer;
+}
+.passage-item:hover{background:#e0f2fe}
+.passage-item a{margin-left:auto;font-size:12px;font-weight:700;white-space:nowrap}
+.inst-right-pane{padding:24px 28px;line-height:1.7;min-width:0}
+.inst-right-pane h3{margin:0 0 6px;color:#075985}
+.inst-right-pane h2{margin:0 0 14px;font-size:20px;color:#0f766e}
+.inst-right-pane p,.inst-right-pane li{font-size:14px;color:#334155}
+.inst-right-pane hr{border:0;border-top:1px solid #e2e8f0;margin:14px 0}
+
+/* ---------- Pre-exam countdown overlay ---------- */
+.pre-exam-overlay{
+    position:fixed;inset:0;z-index:20000;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(15,23,42,.78);backdrop-filter:blur(3px);
+}
+.pre-exam-modal{
+    width:min(440px,90%);padding:30px 26px;
+    text-align:center;background:#fff;border-radius:16px;
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+.pre-exam-modal p{margin:0;color:#475569;font-weight:700}
+.pre-exam-modal h1{margin:10px 0;font-size:72px;color:#dc2626;line-height:1}
+
+/* ---------- Exam screen ---------- */
+.exam-screen-layout{width:min(1500px,98%);margin:14px auto 20px}
+.exam-status-bar{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;
+    padding:11px 18px;margin-bottom:10px;
+    background:#082f49;color:#fff;border-radius:10px;
+    font-weight:700;font-size:15px;
+}
+.timer-red{color:#fecaca}
+.timer-red strong{color:#fff;font-size:17px}
+.exam-split-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    grid-template-rows:minmax(420px,calc(100vh - 270px)) auto;
+    gap:14px;
+}
+.exam-left-ref,.exam-right-typing{
+    display:flex;flex-direction:column;min-height:0;
+    background:#fff;border:1px solid #cbd5e1;border-radius:12px;overflow:hidden;
+    box-shadow:0 6px 18px rgba(15,23,42,.06);
+}
+.ref-title{
+    padding:10px 16px;
+    background:#e0f2fe;color:#075985;font-weight:800;font-size:14px;
+    border-bottom:1px solid #bae6fd;
+}
+.ref-content{
+    flex:1;padding:18px;overflow-y:auto;
+    font-size:19px;line-height:1.85;color:#0f172a;
+    user-select:none;-webkit-user-select:none;
+    word-break:break-word;
+}
+.typing-textarea{
+    flex:1;width:100%;padding:18px;
+    border:0;resize:none;
+    font-size:19px;line-height:1.85;font-family:inherit;color:#0f172a;
+    background:#fff;
+}
+.typing-textarea:focus{outline:none;background:#fffef5}
+.typing-textarea:disabled{background:#f1f5f9;cursor:not-allowed}
+.exam-bottom-actions{grid-column:1 / -1;display:flex;justify-content:flex-end}
+.btn-exam-submit{
+    padding:12px 36px;border:0;border-radius:9px;
+    background:#16a34a;color:#fff;font-size:16px;font-weight:800;cursor:pointer;
+    transition:filter .2s;
+}
+.btn-exam-submit:hover:not(:disabled){filter:brightness(1.1)}
+.btn-exam-submit:disabled{background:#94a3b8;cursor:not-allowed}
+
+/* Admin PDF reference (left side of exam) */
+.ref-pdf{flex:1;width:100%;min-height:0;border:0;background:#525659}
+
+/* ---------- Business letter editor ---------- */
+.letter-style-hint{
+    padding:7px 14px;background:#fef9c3;color:#854d0e;
+    font-size:12px;font-weight:700;border-bottom:1px solid #fde68a;
+}
+.letter-toolbar{
+    display:flex;flex-wrap:wrap;gap:6px;align-items:center;
+    padding:8px 12px;background:#f1f5f9;border-bottom:1px solid #cbd5e1;
+}
+.letter-toolbar button,.letter-toolbar select{
+    padding:6px 11px;border:1px solid #94a3b8;border-radius:6px;
+    background:#fff;color:#0f172a;font-size:13px;cursor:pointer;
+}
+.letter-toolbar button:hover{background:#e0f2fe;border-color:#0369a1}
+.word-ruler-wrap{padding:6px 24px 0;background:#e2e8f0;border-bottom:1px solid #cbd5e1}
+.word-ruler{
+    position:relative;height:24px;
+    background:#fff;border:1px solid #94a3b8;border-bottom:0;
+    background-image:repeating-linear-gradient(90deg,#94a3b8 0,#94a3b8 1px,transparent 1px,transparent 16.666%);
+}
+.ruler-number{
+    position:absolute;top:3px;transform:translateX(-50%);
+    font-size:10px;color:#475569;pointer-events:none;
+}
+.ruler-marker{
+    position:absolute;width:0;height:0;cursor:ew-resize;
+    border-left:6px solid transparent;border-right:6px solid transparent;
+    transform:translateX(-50%);
+    touch-action:none;
+}
+.ruler-marker.first-line{top:0;left:0;border-top:9px solid #0369a1}
+.ruler-marker.left-indent{bottom:0;left:0;border-bottom:9px solid #0369a1}
+.ruler-marker.right-indent{bottom:0;left:100%;border-bottom:9px solid #ea580c}
+.letter-editor{
+    flex:1;min-height:0;overflow-y:auto;
+    padding:28px 34px;
+    background:#fff;color:#000;
+    font-family:"Times New Roman",Times,serif;font-size:16px;line-height:1.5;
+    outline:none;
+}
+.letter-editor:empty::before{content:attr(data-placeholder);color:#94a3b8}
+.letter-editor:focus{background:#fffffa}
+.letter-editor table{border-collapse:collapse;width:100%}
+.letter-editor th,.letter-editor td{border:1px solid #000;padding:4px 8px}
+
+/* ---------- Result window ---------- */
+.result-modal-backdrop{
+    display:flex;align-items:center;justify-content:center;
+    min-height:calc(100vh - 170px);padding:24px;
+    background:linear-gradient(135deg,#e0f2fe,#f0fdf4);
+}
+.result-table-window{
+    width:min(560px,100%);
+    background:#fff;border-radius:14px;overflow:hidden;
+    box-shadow:0 18px 50px rgba(15,23,42,.18);
+}
+.result-win-head{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:13px 20px;background:linear-gradient(90deg,#075985,#0e7490);
+    color:#fff;font-weight:700;font-size:16px;
+}
+.result-win-body{padding:22px}
+.result-sub-info{
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;
+    margin-bottom:14px;font-size:14px;color:#334155;
+}
+.utm-result-grid{width:100%;border-collapse:collapse;margin-bottom:14px}
+.utm-result-grid th,.utm-result-grid td{
+    padding:10px 12px;border:1px solid #cbd5e1;text-align:left;font-size:14px;
+}
+.utm-result-grid th{background:#e0f2fe;color:#075985}
+.utm-result-grid tr:nth-child(even) td{background:#f8fafc}
+.utm-result-grid .highlight-row td{background:#fef9c3;font-size:16px}
+.letter-result-note{
+    margin-bottom:14px;padding:10px 12px;border-radius:8px;
+    background:#fff7ed;color:#9a3412;border:1px solid #fed7aa;font-size:13px;
+}
+.result-verdict{
+    margin-bottom:16px;padding:13px;border-radius:10px;
+    text-align:center;font-size:20px;font-weight:800;
+}
+.pass-green{background:#dcfce7;color:#166534;border:1px solid #86efac}
+.fail-red{background:#fee2e2;color:#b91c1c;border:1px solid #fca5a5}
+.result-actions-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-utm-gray,.btn-utm-blue{
+    display:inline-block;padding:10px 20px;border-radius:8px;
+    text-decoration:none;font-weight:700;font-size:14px;
+    transition:filter .2s;
+}
+.btn-utm-gray{background:#e2e8f0;color:#1e293b}
+.btn-utm-blue{background:#0369a1;color:#fff}
+.btn-utm-gray:hover,.btn-utm-blue:hover{filter:brightness(.95)}
+
+/* ---------- Compare screen ---------- */
+.compare-container{width:min(1400px,96%);margin:22px auto}
+.compare-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+.compare-head h2{margin:0;color:#075985}
+.compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.compare-box{background:#fff;border:1px solid #cbd5e1;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(15,23,42,.06)}
+.compare-box h3{margin:0;padding:11px 16px;background:#e0f2fe;color:#075985;font-size:15px;border-bottom:1px solid #bae6fd}
+.compare-text{padding:16px;max-height:70vh;overflow-y:auto;font-size:17px;line-height:1.9;word-break:break-word}
+.text-correct{color:#15803d}
+.text-wrong{color:#dc2626;font-weight:700}
+
+/* ---------- Footer ---------- */
+.utm-footer-bar{
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;
+    margin-top:auto;padding:11px 4%;
+    background:#082f49;color:#bae6fd;font-size:12px;
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1000px){
+    .landing-split-card{grid-template-columns:minmax(0,1fr)}
+    .landing-auth-panel{border-left:0;border-top:1px solid #e2e8f0}
+    .inst-split-layout{grid-template-columns:minmax(0,1fr)}
+    .inst-left-list{border-right:0;border-bottom:1px solid #e2e8f0}
+}
+@media(max-width:850px){
+    .exam-split-grid{grid-template-columns:minmax(0,1fr);grid-template-rows:260px 420px auto}
+    .compare-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:600px){
+    .top-institute-bar{font-size:11px;justify-content:center;text-align:center}
+    .landing-left-panel{padding:18px}
+    .landing-header-title{font-size:17px}
+    .menu-items a{padding:8px 11px;font-size:13px}
+    .ref-content,.typing-textarea{font-size:16px}
+    .letter-editor{padding:16px}
+    .pre-exam-modal h1{font-size:56px}
+}
+
+
+/* ---------- Word (.docx) reference (Admin ने दिलेला format) ---------- */
+.ref-doc{
+    background:#fff;
+    font-family:"Times New Roman","Mangal","Noto Sans Devanagari",Times,serif;
+    font-size:16px;line-height:1.5;
+}
+.ref-doc p{margin:0}
+.ref-doc .dtab{display:inline-block;width:3.2em}
+.ref-doc .dtable{border-collapse:collapse;margin:6px 0}
+.ref-doc .dtable td{padding:3px 8px;vertical-align:top}
+.ref-doc .dtable.bordered td{border:1px solid #000}
+
+/* Business letter editor: tab चे अंतर दिसण्यासाठी */
+.letter-editor{white-space:pre-wrap;tab-size:8;-moz-tab-size:8}
+
+/* Compare screen: Half / extra / omitted */
+.compare-legend{margin:0 0 12px;font-size:13px}
+.text-half{color:#d97706;font-weight:700}
+.text-extra{text-decoration:line-through}
+.text-omit{background:#fee2e2;border-radius:3px}
+.text-untyped{color:#94a3b8;font-style:italic}
+
+
+/* Reference passage: Tab (paragraph चा आत सरकलेला भाग) आणि नवीन ओळी जशा आहेत तशा दिसाव्यात */
+.ref-content{white-space:pre-wrap;tab-size:8;-moz-tab-size:8}
+.ref-content.ref-doc{white-space:normal}
+.compare-text{white-space:pre-wrap;tab-size:8;-moz-tab-size:8}
+
+
+/* ---------- Loading animation (spinner) ---------- */
+.utm-loader{
+    position:fixed;inset:0;z-index:30000;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+    background:rgba(240,249,255,.93);backdrop-filter:blur(3px);
+    opacity:0;visibility:hidden;
+    transition:opacity .25s ease,visibility .25s ease;
+}
+.utm-loader.show{opacity:1;visibility:visible}
+.utm-spin{
+    position:relative;width:80px;height:80px;border-radius:50%;
+    border:5px solid #bae6fd;border-top-color:#0369a1;border-right-color:#16a34a;
+    animation:utmSpin .9s linear infinite;
+}
+.utm-spin span{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-size:30px;animation:utmSpinBack .9s linear infinite;
+}
+.utm-loader p{margin:0;font-weight:700;font-size:15px;color:#075985}
+@keyframes utmSpin{to{transform:rotate(360deg)}}
+@keyframes utmSpinBack{to{transform:rotate(-360deg)}}
+@media (prefers-reduced-motion:reduce){.utm-spin,.utm-spin span{animation-duration:2.5s}}
+
+/* ---------- Menu bar: Admin Login button ---------- */
+.menu-auth{gap:10px}
+.menu-admin-btn{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:9px 16px;border-radius:24px;
+    background:#082f49;color:#fff;text-decoration:none;
+    font-size:13px;font-weight:700;
+    transition:background .2s,transform .2s;
+}
+.menu-admin-btn:hover{background:#0369a1;transform:translateY(-2px)}
+
+
+/* ---------- E-Mail typing form ---------- */
+.mail-form{background:#f8fafc;border-bottom:1px solid #cbd5e1}
+.mail-row{display:flex;align-items:center;border-bottom:1px solid #e2e8f0}
+.mail-row label{width:78px;padding:9px 12px;font-size:13px;font-weight:700;color:#475569}
+.mail-row input{
+    flex:1;min-width:0;padding:9px 10px;border:0;background:#fff;
+    font-size:15px;font-family:inherit;color:#0f172a;
+}
+.mail-row input:focus{outline:none;background:#fffef5}
+.mail-row input:disabled{background:#f1f5f9;cursor:not-allowed}
+.letter-editor.mail-body{font-family:Arial,"Noto Sans Devanagari",sans-serif;font-size:15px}
+
+/* ==========================================================
+   Statement (Excel सारखा) आणि E-Mail परीक्षा screens
+   ========================================================== */
+.exam-topbar{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+    padding:10px 18px;margin-bottom:10px;
+    background:#000;border-radius:6px;color:#fff;
+    font-weight:800;letter-spacing:1px;font-size:15px;
+}
+.tb-orange{color:#f59e0b}.tb-green{color:#a3e635}.tb-purple{color:#c084fc}
+.exam-topbar-timer{display:flex;align-items:center;gap:10px;color:#e5e7eb;font-weight:600}
+.timer-digital{display:inline-block;padding:4px 14px;border:2px solid #7f1d1d;background:#1a0000;border-radius:4px}
+.timer-digital strong{font-family:"Courier New",monospace;font-size:20px;color:#ef4444;letter-spacing:2px}
+
+/* ----- Excel grid ----- */
+.xl-pane{background:#fff}
+.xl-pane-title{padding:9px;text-align:center;font-weight:800;letter-spacing:1px;color:#111;background:#f3f4f6;border-bottom:1px solid #d1d5db}
+.xl-wrap{flex:1;min-height:0;display:flex;flex-direction:column}
+.xl-ribbon{display:flex;flex-wrap:wrap;gap:4px;align-items:center;padding:6px 8px;background:#f3f6f4;border-bottom:1px solid #c9d3cc}
+.xl-ribbon button{padding:5px 10px;border:1px solid #b6c2ba;border-radius:4px;background:#fff;font-size:13px;cursor:pointer}
+.xl-ribbon button:hover{background:#e6f4ea;border-color:#217346}
+.xl-sep{width:1px;align-self:stretch;background:#c9d3cc;margin:0 4px}
+.xl-formula{display:flex;align-items:center;gap:8px;padding:4px 8px;background:#fff;border-bottom:1px solid #d1d5db;font-size:13px}
+.xl-formula span{min-width:54px;padding:3px 8px;border:1px solid #d1d5db;border-radius:3px;background:#f9fafb;font-weight:700;text-align:center}
+.xl-formula input{flex:1;border:1px solid #e5e7eb;padding:4px 6px;font-size:13px;background:#fff}
+.xl-scroll{flex:1;min-height:0;overflow:auto;background:#fff}
+.xl-table{border-collapse:collapse;table-layout:fixed;font-family:"Times New Roman","Mangal",serif;font-size:15px}
+.xl-table thead th{position:sticky;top:0;z-index:2;background:#e6e6e6;border:1px solid #bdbdbd;font:600 12px Arial,sans-serif;color:#444;padding:2px 6px;min-width:110px}
+.xl-table thead th.xl-corner{min-width:38px;width:38px;left:0;z-index:3}
+.xl-table tbody th{position:sticky;left:0;z-index:1;background:#e6e6e6;border:1px solid #bdbdbd;font:600 12px Arial,sans-serif;color:#444;padding:2px 6px;width:38px;min-width:38px}
+.xl-table td{border:1px solid #d4d4d4;padding:2px 6px;height:24px;min-width:110px;white-space:nowrap;overflow:hidden;background:#fff}
+.xl-table td.xl-bd{border:1px solid #000}
+.xl-table td.xl-sel{background:#eef7f1;box-shadow:inset 0 0 0 2px #217346}
+.xl-table td:focus{outline:2px solid #217346;outline-offset:-2px}
+.xl-table td.xl-ro{cursor:default;user-select:none;-webkit-user-select:none}
+
+/* ----- E-Mail cards ----- */
+.exam-left-ref.mail-pane,.exam-right-typing.mail-pane{display:block;overflow:auto;padding:14px}
+.mail-card{background:#fff;padding:6px 6px 14px}
+.mail-title{color:#2b8fd1;font-weight:800;font-size:15px;margin-bottom:14px;letter-spacing:.3px}
+.mail-line{display:flex;align-items:center;margin-bottom:10px;background:#eef0f3;border-radius:3px;overflow:hidden}
+.mail-line span{min-width:66px;padding:11px 12px;background:#dfe3e8;color:#555;font-size:15px}
+.mail-line input{flex:1;min-width:0;padding:11px 12px;border:0;background:transparent;font-size:15px;color:#222;font-family:inherit}
+.mail-a .mail-line{background:#fff;border:1px solid #dcdfe4}
+.mail-a .mail-line span{background:#eceff3}
+.mail-a .mail-line input{background:#fff}
+.mail-label{margin:10px 0 4px;color:#444;font-size:15px}
+.mail-msg{width:100%;min-height:160px;padding:10px 12px;border:1px solid #dcdfe4;border-radius:3px;font-size:15px;font-family:Arial,"Noto Sans Devanagari",sans-serif;line-height:1.6;resize:vertical}
+.mail-q .mail-msg{background:#e9ebee;border-color:#e0e3e8;color:#333}
+.mail-a .mail-msg:focus,.mail-a .mail-line input:focus{outline:2px solid #3aa6a0;outline-offset:-1px}
+.mail-a input:disabled,.mail-a textarea:disabled{background:#f4f5f7;cursor:not-allowed}
+.mail-attach-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.mail-attach{display:flex}
+.mail-attach input{flex:1;min-width:0;padding:11px 12px;border:0;background:#e9ebee;font-size:15px;font-family:inherit}
+.mail-clip,.mail-clip-static{width:44px;border:0;background:#dfe3e8;font-size:16px;display:flex;align-items:center;justify-content:center}
+.mail-clip{cursor:pointer}
+.mail-clip:disabled{cursor:not-allowed;opacity:.6}
+.mail-send-wrap{text-align:center;margin-top:22px}
+.mail-send{padding:12px 42px;border:0;border-radius:3px;background:#79c9c2;color:#fff;font-weight:700;letter-spacing:1px;font-size:13px}
+.mail-send-on{background:#1fa59a;cursor:pointer}
+.mail-send:disabled{opacity:.6;cursor:not-allowed}
+.attach-modal{position:fixed;inset:0;z-index:25000;display:none;align-items:center;justify-content:center;background:rgba(15,23,42,.45)}
+.attach-modal.show{display:flex}
+.attach-box{width:min(360px,92vw);max-height:86vh;display:flex;flex-direction:column;background:#fff;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.attach-list{overflow:auto;padding:14px 22px}
+.attach-item{display:block;width:100%;text-align:left;padding:10px 6px;border:0;background:none;font-weight:700;color:#555;font-size:15px;cursor:pointer;border-radius:3px}
+.attach-item:hover{background:#f1f5f9}
+.attach-item.on{background:#d9f2ef;color:#0f766e}
+.attach-foot{padding:12px 16px;text-align:right;border-top:1px solid #eee}
+.attach-ok{padding:11px 26px;border:0;border-radius:3px;background:#1fa59a;color:#fff;font-weight:700;cursor:pointer}
+@media(max-width:850px){.mail-attach-row{grid-template-columns:1fr}}
+
+
+/* ==========================================================
+   RESPONSIVE LAYER  -  सर्व Screen (14" laptop, 19", 24" आणि मोठे
+   monitors, Tablet, Mobile Portrait / Landscape)
+   ========================================================== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:hidden}
+img,iframe,video,canvas{max-width:100%}
+.main-screen-container{min-width:0}
+.utm-settings-dialog{max-height:94vh;overflow-y:auto}
+.utm-footer-bar{padding-bottom:calc(11px + env(safe-area-inset-bottom,0px))}
+
+/* ---- Mobile browser मध्ये address-bar मुळे उंची बदलते: dvh वापरा ---- */
+@supports (height:100dvh){
+    .utm-settings-dialog{max-height:94dvh}
+    .exam-split-grid{grid-template-rows:minmax(420px,calc(100dvh - 270px)) auto}
+    .desktop-landing-bg{min-height:calc(100dvh - 170px)}
+    .result-modal-backdrop{min-height:calc(100dvh - 170px)}
+}
+
+/* ---- मोठे Monitors: 24" आणि वर (1680px+) ---- */
+@media (min-width:1680px){
+    .top-institute-bar,.top-menu-bar,.utm-footer-bar{padding-left:5%;padding-right:5%}
+    .top-institute-bar{font-size:15px}
+    .menu-items a{font-size:15px;padding:10px 18px}
+    body .landing-split-card.auth-expanded{width:min(1800px,calc(100vw - 80px)) !important}
+    .landing-twin-card{width:min(1620px,96%)}
+    .landing-left-panel{padding:40px}
+    .landing-header-title{font-size:27px}
+    .landing-header-title span{font-size:20px}
+    .mode-box{padding:32px 20px 24px}
+    .mode-box h3{font-size:18px}
+    .mode-box p{font-size:14.5px}
+    .btn-portal{font-size:15px;padding:13px 16px}
+    .landing-auth-panel{padding:34px 32px}
+    .utm-instructions-window{width:min(1320px,92%)}
+    .inst-right-pane p,.inst-right-pane li{font-size:15.5px}
+    .exam-screen-layout{width:min(1800px,98%)}
+    .exam-status-bar{font-size:17px}
+    .ref-content,.typing-textarea{font-size:22px}
+    .letter-editor{font-size:18px}
+    .xl-table{font-size:17px}
+    .xl-table td{height:28px}
+    .mail-line input,.mail-msg,.mail-attach input{font-size:17px}
+    .result-table-window{width:min(640px,100%)}
+    .compare-container{width:min(1760px,96%)}
+    .compare-text{font-size:19px}
+}
+@media (min-width:2300px){
+    body .landing-split-card.auth-expanded{width:min(2100px,calc(100vw - 120px)) !important}
+    .landing-twin-card{width:min(2000px,94%)}
+    .exam-screen-layout{width:min(2300px,98%)}
+    .ref-content,.typing-textarea{font-size:26px}
+    .utm-instructions-window{width:min(1500px,90%)}
+    .compare-container{width:min(2200px,96%)}
+    .compare-text{font-size:22px}
+}
+
+/* ---- 14" laptop / कमी उंचीचे Screen (1366x768, 1280x720) ---- */
+@media (max-height:820px) and (min-width:851px){
+    .top-institute-bar{padding-top:6px;padding-bottom:6px;font-size:12px}
+    .top-menu-bar{padding-top:5px;padding-bottom:5px}
+    .menu-items a{padding:7px 13px}
+    .desktop-landing-bg{padding:18px 16px 24px;min-height:0}
+    .landing-left-panel{padding:20px}
+    .landing-header-title{font-size:18px;margin-bottom:16px}
+    .landing-header-title span{font-size:14px}
+    .mode-box{padding:18px 14px 14px}
+    .mode-box p{margin-bottom:10px}
+    .mode-icon-circle{width:54px;height:54px;font-size:26px}
+    .utm-instructions-window{margin:14px auto}
+    .passage-list-scroll{max-height:200px}
+    .exam-screen-layout{margin:8px auto 12px}
+    .exam-status-bar,.exam-topbar{padding:7px 14px;margin-bottom:6px}
+    .exam-split-grid{gap:10px;grid-template-rows:minmax(300px,calc(100vh - 225px)) auto}
+    .ref-content,.typing-textarea{font-size:17px;line-height:1.7}
+    .pre-exam-modal h1{font-size:60px}
+}
+@supports (height:100dvh){
+    @media (max-height:820px) and (min-width:851px){
+        .exam-split-grid{grid-template-rows:minmax(300px,calc(100dvh - 225px)) auto}
+    }
+}
+
+/* ---- Tablet (iPad / Android Tab) ---- */
+@media (max-width:1024px){
+    .top-institute-bar,.top-menu-bar,.utm-footer-bar{padding-left:3%;padding-right:3%}
+    .menu-items a{padding:8px 12px;font-size:13px}
+    .exam-screen-layout{width:98%}
+    .compare-container{width:97%}
+}
+
+/* ---- Tablet portrait आणि Mobile: दोन भाग एकाखाली एक ---- */
+@media (max-width:850px){
+    .exam-split-grid{grid-template-columns:minmax(0,1fr);grid-template-rows:none !important;grid-auto-rows:auto;gap:10px}
+    .exam-left-ref{height:36vh;min-height:200px}
+    .exam-right-typing{height:52vh;min-height:300px}
+    .exam-mode-statement .exam-left-ref,.exam-mode-statement .exam-right-typing{height:52vh;min-height:300px}
+    .exam-mode-email .exam-left-ref,.exam-mode-email .exam-right-typing{height:auto;min-height:0}
+    .compare-grid{grid-template-columns:minmax(0,1fr)}
+    .result-modal-backdrop{align-items:flex-start}
+}
+@supports (height:100dvh){
+    @media (max-width:850px){
+        .exam-left-ref{height:36dvh}
+        .exam-right-typing{height:52dvh}
+        .exam-mode-statement .exam-left-ref,.exam-mode-statement .exam-right-typing{height:52dvh}
+        .exam-mode-email .exam-left-ref,.exam-mode-email .exam-right-typing{height:auto}
+    }
+}
+
+/* ---- Mobile (Phone) ---- */
+@media (max-width:600px){
+    .top-institute-bar{padding:6px 10px;font-size:11px;gap:2px;justify-content:center;text-align:center}
+    .top-menu-bar{padding:6px 10px;gap:6px}
+    .menu-items{flex-wrap:nowrap;overflow-x:auto;width:100%;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .menu-items::-webkit-scrollbar{display:none}
+    .menu-items a{white-space:nowrap;flex:0 0 auto}
+    .menu-auth{width:100%;justify-content:space-between}
+    .menu-admin-btn{padding:8px 12px;font-size:12px}
+    .desktop-landing-bg{padding:12px 8px 22px}
+    .landing-twin-card{border-radius:14px}
+    .landing-left-panel{padding:16px 12px}
+    .landing-header-title{font-size:16px;margin-bottom:16px}
+    .landing-header-title span{font-size:13px}
+    .landing-auth-panel{padding:18px 14px}
+    .mode-cards-container{grid-template-columns:1fr;gap:12px}
+    .mode-box{padding:22px 14px 16px}
+    .utm-instructions-window{width:97%;margin:12px auto;border-radius:12px}
+    .inst-win-header{padding:11px 14px;font-size:14px}
+    .inst-left-list,.inst-right-pane{padding:14px}
+    .inst-right-pane h2{font-size:17px}
+    .upload-zone-box{padding:16px 10px}
+    .key-restrictions-strip{padding:10px;font-size:12px}
+    .utm-settings-dialog{padding:20px 16px}
+    .exam-screen-layout{width:99%;margin:6px auto}
+    .exam-status-bar{font-size:12.5px;padding:8px 10px}
+    .exam-topbar{font-size:11.5px;padding:8px 10px;letter-spacing:.3px}
+    .timer-digital strong{font-size:16px}
+    .ref-content,.typing-textarea{font-size:16px;padding:12px;line-height:1.7}
+    .exam-bottom-actions{justify-content:stretch}
+    .btn-exam-submit{width:100%}
+    .letter-style-hint{font-size:11px}
+    .letter-toolbar{gap:4px;padding:6px}
+    .letter-toolbar button,.letter-toolbar select{padding:7px 9px;font-size:12px}
+    .word-ruler-wrap{padding:4px 8px 0}
+    .letter-editor{padding:14px 12px;font-size:15px}
+    .xl-pane-title{font-size:13px;padding:7px}
+    .xl-ribbon{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .xl-ribbon button{white-space:nowrap;flex:0 0 auto}
+    .xl-table thead th,.xl-table td{min-width:88px}
+    .mail-title{font-size:13px}
+    .mail-line span{min-width:56px;padding:10px 8px;font-size:14px}
+    .mail-line input{padding:10px 8px}
+    .exam-left-ref.mail-pane,.exam-right-typing.mail-pane{padding:8px}
+    .mail-send{padding:12px 32px}
+    .result-modal-backdrop{padding:8px}
+    .result-win-body{padding:14px}
+    .utm-result-grid th,.utm-result-grid td{padding:8px;font-size:13px}
+    .result-verdict{font-size:18px}
+    .compare-container{width:98%;margin:12px auto}
+    .compare-text{font-size:15px;max-height:46vh}
+    .pre-exam-modal{padding:22px 16px}
+    .pre-exam-modal h1{font-size:56px}
+}
+@media (max-width:380px){
+    .top-institute-bar{font-size:10px}
+    .landing-header-title{font-size:15px}
+    .btn-portal{font-size:13px}
+    .ref-content,.typing-textarea{font-size:15px}
+    .mail-attach-row{gap:8px}
+}
+
+/* ---- Mobile आडवा (Landscape) ---- */
+@media (max-height:520px) and (orientation:landscape){
+    .top-institute-bar{display:none}
+    .top-menu-bar{padding:4px 3%}
+    .desktop-landing-bg{padding:10px}
+    .exam-left-ref{height:70vh}
+    .exam-right-typing{height:80vh}
+    .pre-exam-modal h1{font-size:44px}
+}
+
+/* ---- Touch Screen: मोठी बटने, iPhone मध्ये input वर आपोआप zoom होऊ नये ---- */
+@media (pointer:coarse){
+    .btn-portal,.auth-tab,.win-btn-start,.btn-start-exam-blue,.btn-exam-submit,.btn-utm-gray,.btn-utm-blue,.utm-settings-continue,.attach-ok{min-height:44px}
+    .menu-items a{display:inline-flex;align-items:center;min-height:42px}
+    .passage-item{padding:11px 10px}
+    input[type=text],input[type=password],input[type=email],input[type=tel],select,textarea,.win-input,.mail-line input,.xl-formula input{font-size:16px}
+    .xl-table td{height:34px}
+    .letter-toolbar button,.xl-ribbon button{min-height:38px}
+    .mode-box:hover,.btn-portal:hover{transform:none}
+}
+
+/* ---- Print / कमी motion ---- */
+@media (prefers-reduced-motion:reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+    .utm-spin{animation:utmSpin 2.5s linear infinite !important}
+    .utm-spin span{animation:utmSpinBack 2.5s linear infinite !important}
+}
